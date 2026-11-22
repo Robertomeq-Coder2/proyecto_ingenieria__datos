@@ -8,3 +8,6 @@ ventas = pd.DataFrame({
 
 ventas
 
+ventas["ingresos"] = ventas["precio"] * ventas["cantidad"]
+
+ventas
