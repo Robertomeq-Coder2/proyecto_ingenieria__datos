@@ -11,3 +11,20 @@ ventas
 ventas["ingresos"] = ventas["precio"] * ventas["cantidad"]
 
 ventas
+
+
+def calcular_resumen(df):
+    resumen = {
+        "total_proudctos": len(df),
+        "ingresos_totales" : df["ingresos"].sum(),
+        "unidades_vendidas": df["cantidad"].sum(),
+        "precio_promedio": df ["precio"].mean()
+    }
+
+    return resumen
+
+resumen = calcular_resumen(ventas)
+
+print(resumen)
+
+
